@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>지출 관리</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>지출 관리</h1>
+
+    <form id="expense-form">
+      <input type="date" id="date" required>
+      <input type="text" id="description" placeholder="내용" required>
+      <select id="category" required></select>
+      <input type="number" id="amount" placeholder="금액 (₩)" min="1" step="1" required>
+      <button type="submit">추가</button>
+    </form>
+
+    <div class="toolbar">
+      <label>월 선택 <input type="month" id="month"></label>
+      <button type="button" id="clear-month">전체 보기</button>
+      <button type="button" id="export">CSV 내보내기</button>
+    </div>
+
+    <section>
+      <h2>지출 내역</h2>
+      <table>
+        <thead><tr><th>날짜</th><th>내용</th><th>분류</th><th class="num">금액</th><th></th></tr></thead>
+        <tbody id="expense-list"></tbody>
+      </table>
+      <p id="empty" hidden>지출 내역이 없습니다.</p>
+    </section>
+
+    <section>
+      <h2>분류별 합계</h2>
+      <table>
+        <tbody id="summary"></tbody>
+        <tfoot><tr><th>총합</th><th class="num" id="total"></th></tr></tfoot>
+      </table>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  background: #f5f6f8;
+  color: #222;
+}
+
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+h1 { margin-top: 0; }
+h2 { font-size: 1.1rem; margin: 28px 0 8px; }
+
+form, .toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.toolbar { margin-top: 16px; }
+
+input, select, button {
+  font: inherit;
+  padding: 8px 10px;
+  border: 1px solid #ccd;
+  border-radius: 6px;
+  background: #fff;
+}
+
+#description { flex: 1 1 160px; }
+#amount { width: 140px; }
+
+button {
+  cursor: pointer;
+  background: #2f6fed;
+  color: #fff;
+  border-color: #2f6fed;
+}
+
+button.delete, #clear-month {
+  background: #fff;
+  color: #555;
+  border-color: #ccd;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 8px 10px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.num { text-align: right; font-variant-numeric: tabular-nums; }
+tfoot th { border-bottom: none; }
